@@ -1,7 +1,7 @@
 import Lottie from "react-lottie";
-import animationData from "../assets/searchlottie.json";
+import animationData from "../assets/notFound.json";
 
-export const LottieSearch = () => {
+export const NotFound = () => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
