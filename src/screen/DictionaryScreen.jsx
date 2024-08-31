@@ -66,7 +66,7 @@ export const DictionaryScreen = () => {
   };
 
   return (
-    <Box className="flex flex-col shadow-2xl lg:min-w-[900px] lg:min-h-[600px] rounded-3xl p-10">
+    <Box className="flex flex-col shadow-2xl lg:min-w-[900px] min-h-[600px] rounded-3xl p-10">
       <Box className="flex gap-5">
         <TextField
           onChange={(e) => {
