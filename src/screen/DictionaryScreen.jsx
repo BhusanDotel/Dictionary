@@ -1,4 +1,5 @@
 import { Box, Button, TextField } from "@mui/material";
+import { LottieSearch } from "../components/LottieSearch";
 
 export const DictionaryScreen = () => {
   return (
@@ -7,6 +8,8 @@ export const DictionaryScreen = () => {
       <Button variant="contained" size="small">
         Search
       </Button>
+
+      <LottieSearch />
     </Box>
   );
 };
