@@ -14,7 +14,11 @@ export const DictionaryResult = ({ meanings, pronunciations }) => {
   return (
     <Box>
       <Box className="flex items-center gap-5 mt-5">
-        <audio src={currentAccentAudio} controls></audio>
+        <audio
+          className="w-[150px] md:w-[300px]"
+          src={currentAccentAudio}
+          controls
+        ></audio>
 
         <Box className="w-20">
           <FormControl fullWidth>

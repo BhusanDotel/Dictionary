@@ -1,4 +1,6 @@
 import Lottie from "react-lottie";
+import { Box } from "@mui/material";
+
 import animationData from "../assets/searchlottie.json";
 
 export const LottieSearch = () => {
@@ -11,6 +13,10 @@ export const LottieSearch = () => {
     },
   };
   return (
-    <Lottie options={defaultOptions} style={{ height: 500, width: 500 }} />
+    <Box className="flex justify-center w-[full] h-[full]">
+      <Box className="w-[200px] h-[200px] md:w-[500px] md:h-[500px]">
+        <Lottie options={defaultOptions} />
+      </Box>
+    </Box>
   );
 };
