@@ -6,11 +6,11 @@ import { DictionaryScreen } from "./screen/DictionaryScreen";
 
 export const App = () => {
   return (
-    <Box className="flex flex-col items-center gap-4">
+    <Box className="flex flex-col items-center gap-4 md:gap-10">
       <Box className="flex justify-center w-[90%] md:w-[70%] pt-20">
         <DictionaryScreen />
       </Box>
-      <Box className="flex justify-end w-full">
+      <Box className="flex justify-center pb-4 w-full">
         <Box>
           <IconButton
             onClick={() => {

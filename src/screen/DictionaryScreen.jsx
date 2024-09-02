@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Box, Button, TextField } from "@mui/material";
+import { SearchOutlined } from "@mui/icons-material";
 
 import { LottieSearch } from "../components/LottieSearch";
 import { DictionaryResult } from "../components/DictionaryResult";
@@ -67,8 +68,8 @@ export const DictionaryScreen = () => {
 
   return (
     <Box className="flex flex-col shadow-2xl lg:min-w-[900px] min-h-[600px] rounded-3xl p-10">
-      <Box className="flex gap-5">
-        <Box className="min-w-[100px]">
+      <Box className="flex justify-center gap-5 w-full md:px-5">
+        <Box className="min-w-[100px] w-full">
           <TextField
             onChange={(e) => {
               e.preventDefault();
@@ -82,15 +83,27 @@ export const DictionaryScreen = () => {
             label="Enter word"
           />
         </Box>
-        <Box>
+        <Box className="w-[150px] hidden sm:hidden md:block h-full">
           <Button
             onClick={handleSearch}
-            sx={{ width: "150px", height: "100%" }}
+            sx={{ width: "100%", height: "100%" }}
             variant="contained"
             size="small"
             fullWidth
           >
             Search
+          </Button>
+        </Box>
+
+        <Box className="w-[30px] h-full md:hidden sm:block">
+          <Button
+            onClick={handleSearch}
+            sx={{ width: "100%", height: "100%" }}
+            variant="contained"
+            size="small"
+            fullWidth
+          >
+            <SearchOutlined />
           </Button>
         </Box>
       </Box>
