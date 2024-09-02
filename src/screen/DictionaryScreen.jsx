@@ -68,26 +68,31 @@ export const DictionaryScreen = () => {
   return (
     <Box className="flex flex-col shadow-2xl lg:min-w-[900px] min-h-[600px] rounded-3xl p-10">
       <Box className="flex gap-5">
-        <TextField
-          onChange={(e) => {
-            e.preventDefault();
-            setWord(e.target.value);
-          }}
-          onKeyDown={(e) => {
-            e.key === "Enter" && handleSearch();
-          }}
-          fullWidth
-          size="small"
-          label="Enter word"
-        />
-        <Button
-          onClick={handleSearch}
-          sx={{ width: "150px" }}
-          variant="contained"
-          size="small"
-        >
-          Search
-        </Button>
+        <Box className="min-w-[100px]">
+          <TextField
+            onChange={(e) => {
+              e.preventDefault();
+              setWord(e.target.value);
+            }}
+            onKeyDown={(e) => {
+              e.key === "Enter" && handleSearch();
+            }}
+            fullWidth
+            size="small"
+            label="Enter word"
+          />
+        </Box>
+        <Box>
+          <Button
+            onClick={handleSearch}
+            sx={{ width: "150px", height: "100%" }}
+            variant="contained"
+            size="small"
+            fullWidth
+          >
+            Search
+          </Button>
+        </Box>
       </Box>
 
       {isLoading && <LottieSearch />}
